@@ -1,0 +1,17 @@
+version: '3.8'  # Hoặc phiên bản docker-compose khác mà bạn muốn sử dụng
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 9090:5000
+    user: root
+    image: docker.io/vutrongquang/backend-pyhton:latest
+    networks:
+      - backend
+networks:
+  backend:
+    name: backend
+    driver: bridge
