@@ -143,3 +143,4 @@ if __name__ == "__main__":
     print(f"Application started at http://127.0.0.1:{PORT}/")
     httpd.serve_forever()
 
+# main
